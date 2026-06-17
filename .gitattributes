@@ -1,0 +1,27 @@
+# Normalize all text files (LF)
+* text=auto
+
+# Source code: enforce LF
+*.js   text eol=lf
+*.json text eol=lf
+*.ts   text eol=lf
+
+# Shell scripts: enforce LF
+*.sh   text eol=lf
+
+# Windows scripts: enforce CRLF
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# Binary files
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.ico  binary
+
+# Custom merge: favor our version for lock files
+package-lock.json merge=ours
+yarn.lock         merge=ours
+
+# Markdown: custom diff
+*.md diff=markdown
